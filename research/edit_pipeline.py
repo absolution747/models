@@ -79,8 +79,9 @@ def main():
     pipeline_config.train_config.fine_tune_checkpoint = "efficientdet/checkpoint_start/ckpt-0"
 
     config_text = text_format.MessageToString(pipeline_config)                                                                                                                                                                                                        
-    with tf.io.gfile.GFile('efficientdet/pipline_new.config', "wb") as f:                                                                                                                                                                                                                       
-        f.write(config_text)                                                                                                                                                                                                                                          
+    with tf.io.gfile.GFile('efficientdet/pipeline_new.config', "wb") as f:                                                                                                                                                                                                                       
+        f.write(config_text)
+        print('pipeline_new.config created')                                                                                                                                                                                                                                          
 
 
 if __name__ == '__main__':                                                                                                                                                                                                                                            
